@@ -1,0 +1,68 @@
+---
+layout: post
+title: "046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto"
+date: 2017-04-21
+categories: podcast
+image: img/ugeek.png
+podcast_link: https://ia601509.us.archive.org/6/items/046SyncthingResilioYDukto/%23046%20Syncthing%2c%20Resilio%20y%20Dukto%20.mp3
+tags: [syncthing, resilio, dukto, sincronización carpetas, podcast]
+categories: podcast
+comments: true
+---
+### Publicado por Angel
+Tags: {% assign sorted_tags = page.tags | sort %} {% for tag in sorted_tags %} , <span class="tag"><a href="/tag2#{{ tag }}">{{ tag }}</a></span> {% endfor %},
+
+Suscribete al Blog  |  [RSS del Blog](http://feeds.feedburner.com/uGeekBlog) |   
+
+Suscribete al Podcast  |  [RSS](http://feeds.feedburner.com/ugeek) | [ITunes](https://itunes.apple.com/us/podcast/ugeek/id1201421866?mt=2) | [ivoox](https://www.ivoox.com/podcast-ugeek_sq_f1383493_1.html)   
+
+
+<!-- ---------------------------------------------------Pon aquí el audio-------------------------------------------------------- -->
+<a href="https://ia601509.us.archive.org/6/items/046SyncthingResilioYDukto/%23046%20Syncthing%2c%20Resilio%20y%20Dukto%20.mp3">Descargar Podcast</a>  
+
+<iframe src="https://archive.org/embed/046SyncthingResilioYDukto" width="100%" height="140" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+<!-- ----------------------------------------------------Inicio de comentarios--------------------------------------------------- -->
+
+En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc... Con tre aplicaciones.
+
+[Syncthing](https://syncthing.net/)
+
+[Resilio](https://www.resilio.com)
+
+[Dukto](http://www.msec.it/blog/?page_id=11)
+
+Muchas grácias a atareao.es y compilando podcast, por mencionar el podcast en los post y añadir los episodios en la rádio online.
+
+[Podcast del atareao.es](https://www.atareao.es/otros/podcast-de-linux-y-software-libre)
+
+[Compilando Podcast](https://t.co/l7Xqn1L2Oc)
+
+
+<!-- -------------------------------------Aquí abajo los comentarios -------------------------------------------  -->
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-angelbcn-github-io-ugeek.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+{% endif %}
+
+<script id="dsq-count-scr" src="//https-angelbcn-github-io-ugeek.disqus.com/count.js" async></script>
+
+

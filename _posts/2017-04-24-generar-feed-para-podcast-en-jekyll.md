@@ -3,6 +3,7 @@ layout: page
 title: "Crear el Feed para el podcast en tu Blog con Jekyll"
 date: 2017-04-24
 tags: [jekyll, blog, feed, podcast]
+categories: jekyll
 ---
 # Publicado por Angel
 

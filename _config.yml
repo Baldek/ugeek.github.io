@@ -22,6 +22,21 @@ url: "ugeek.github.io" # the base hostname & protocol for your site, e.g. http:/
 <a href="http://feeds.feedburner.com/ugeek"><img style="float: left;" src="img/icon/podcast.png" alt="" width="20" height="20" />
 
 
+# Podcast Feed Settings
+podcast_url: https://ugeek.github.io
+podcast_album_art: https://ugeek.github.io/img/ugeek.png
+podcast_title: uGeek
+podcast_owner: Angel
+podcast_email: ugeekpodcast@gmail.com
+podcast_category: Technology
+podcast_subcategory_one: Linux
+podcast_subcategory_two: Gadgets
+podcast_explicit: "no"
+podcast_author: Angel
+podcast_description: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+podcast_summary: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+podcast_subtitle: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+
 # Build settings
 markdown: kramdown
 theme: minima

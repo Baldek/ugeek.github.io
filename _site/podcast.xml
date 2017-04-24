@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="http://192.168.1.108:4000/feed/podcast" rel="self" type="application/rss+xml" />
 <link>http://192.168.1.108:4000</link>
 <description></description>
-<lastBuildDate>Mon, 24 Apr 2017 19:44:56 +0000</lastBuildDate>
+<lastBuildDate>Mon, 24 Apr 2017 20:05:11 +0000</lastBuildDate>
 <language>es-es</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -41,8 +41,8 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 
   <item>
     <title>046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto</title>
-    <link>http://192.168.1.108:4000/podcast/2017/04/21/p046.html</link>
-    <comments>http://192.168.1.108:4000/podcast/2017/04/21/p046.html#comments</comments>
+    <link>http://192.168.1.108:4000/podcast/2017/04/21/046-sincronizacion-carpetas-syncthing-resilio-dukto.html</link>
+    <comments>http://192.168.1.108:4000/podcast/2017/04/21/046-sincronizacion-carpetas-syncthing-resilio-dukto.html#comments</comments>
     <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
     <dc:creator><![CDATA[]]></dc:creator>
 
@@ -59,7 +59,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 
     <category><![CDATA[podcast]]></category>
 
-    <guid isPermaLink="true">http://192.168.1.108:4000/podcast/2017/04/21/p046.html</guid>
+    <guid isPermaLink="true">http://192.168.1.108:4000/podcast/2017/04/21/046-sincronizacion-carpetas-syncthing-resilio-dukto.html</guid>
     <description>
         <![CDATA[Publicado por Angel Tags: , dukto , podcast , resilio , sincronización carpetas , syncthing , Suscribete al Blog RSS del Blog Suscribete al Podcast RSS ITunes ivoox Descargar Podcast En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones. Syncthing...]]>
     </description>

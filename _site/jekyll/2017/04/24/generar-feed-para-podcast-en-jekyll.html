@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Crear el Feed para el podcast en tu Blog con Jekyll</title>
+  <meta name="description" content="Publicado por Angel">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://192.168.1.108:4000/jekyll/2017/04/24/generar-feed-para-podcast-en-jekyll.html">
+  <link rel="alternate" type="application/rss+xml" title="uGeek" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">uGeek</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/about.html">Sobre uGeek</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <a class="page-link" href="/tag.html">Etiquetas</a>
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Crear el Feed para el podcast en tu Blog con Jekyll</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="publicado-por-angel">Publicado por Angel</h1>
+
+<p>Voy a explicar en este post, como generar el Feed del podcast de forma automática.</p>
+
+<ul>
+  <li>Creamos un archivo <code class="highlighter-rouge">podcast.xml</code> en la raiz, con el siguiente contenido:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">---</span>
+<span class="ss">layout: </span><span class="n">null</span>
+<span class="o">---</span>
+<span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"UTF-8"</span><span class="sc">?&gt;</span><span class="o">&lt;</span><span class="n">rss</span> <span class="n">version</span><span class="o">=</span><span class="s2">"2.0"</span>
+<span class="n">xmlns</span><span class="ss">:content</span><span class="o">=</span><span class="s2">"http://purl.org/rss/1.0/modules/content/"</span>
+<span class="n">xmlns</span><span class="ss">:wfw</span><span class="o">=</span><span class="s2">"http://wellformedweb.org/CommentAPI/"</span>
+<span class="n">xmlns</span><span class="ss">:dc</span><span class="o">=</span><span class="s2">"http://purl.org/dc/elements/1.1/"</span>
+<span class="n">xmlns</span><span class="ss">:atom</span><span class="o">=</span><span class="s2">"http://www.w3.org/2005/Atom"</span>
+<span class="n">xmlns</span><span class="ss">:sy</span><span class="o">=</span><span class="s2">"http://purl.org/rss/1.0/modules/syndication/"</span>
+<span class="n">xmlns</span><span class="ss">:slash</span><span class="o">=</span><span class="s2">"http://purl.org/rss/1.0/modules/slash/"</span>
+<span class="n">xmlns</span><span class="ss">:itunes</span><span class="o">=</span><span class="s2">"http://www.itunes.com/dtds/podcast-1.0.dtd"</span>
+<span class="n">xmlns</span><span class="ss">:rawvoice</span><span class="o">=</span><span class="s2">"http://www.rawvoice.com/rawvoiceRssModule/"</span>
+<span class="o">&gt;</span>
+ 
+<span class="o">&lt;</span><span class="n">channel</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;&lt;</span><span class="sr">/title&gt;
+&lt;atom:link href="http:/</span><span class="o">/</span><span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">108</span><span class="p">:</span><span class="mi">4000</span><span class="o">/</span><span class="n">feed</span><span class="o">/</span><span class="n">podcast</span><span class="s2">" rel="</span><span class="nb">self</span><span class="s2">" type="</span><span class="n">application</span><span class="o">/</span><span class="n">rss</span><span class="o">+</span><span class="n">xml</span><span class="s2">" /&gt;
+&lt;link&gt;http://192.168.1.108:4000&lt;/link&gt;
+&lt;description&gt;&lt;/description&gt;
+&lt;lastBuildDate&gt;Mon, 24 Apr 2017 20:05:11 +0000&lt;/lastBuildDate&gt;
+&lt;language&gt;es-es&lt;/language&gt;
+&lt;sy:updatePeriod&gt;hourly&lt;/sy:updatePeriod&gt;
+&lt;sy:updateFrequency&gt;1&lt;/sy:updateFrequency&gt;
+&lt;generator&gt;http://jekyllrb.com&lt;/generator&gt;
+&lt;itunes:summary&gt;&lt;/itunes:summary&gt;
+&lt;itunes:author&gt;&lt;/itunes:author&gt;
+&lt;itunes:explicit&gt;&lt;/itunes:explicit&gt;
+&lt;itunes:image href="</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">108</span><span class="p">:</span><span class="mi">4000</span><span class="s2">" /&gt;
+&lt;itunes:owner&gt;
+&lt;itunes:name&gt;&lt;/itunes:name&gt;
+&lt;itunes:email&gt;&lt;/itunes:email&gt;
+&lt;/itunes:owner&gt;
+&lt;managingEditor&gt; ()&lt;/managingEditor&gt;
+&lt;itunes:subtitle&gt;&lt;/itunes:subtitle&gt;
+&lt;image&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;url&gt;http://192.168.1.108:4000&lt;/url&gt;
+&lt;link&gt;http://192.168.1.108:4000&lt;/link&gt;
+&lt;/image&gt;
+&lt;itunes:category text=""&gt;
+&lt;itunes:category text="" /&gt;
+&lt;itunes:category text="" /&gt;
+&lt;/itunes:category&gt;
+
+  &lt;item&gt;
+    &lt;title&gt;046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto&lt;/title&gt;
+    &lt;link&gt;http://192.168.1.108:4000/podcast/2017/04/21/046-sincronizacion-carpetas-syncthing-resilio-dukto.html&lt;/link&gt;
+    &lt;comments&gt;http://192.168.1.108:4000/podcast/2017/04/21/046-sincronizacion-carpetas-syncthing-resilio-dukto.html#comments&lt;/comments&gt;
+    &lt;pubDate&gt;Fri, 21 Apr 2017 00:00:00 +0000&lt;/pubDate&gt;
+    &lt;dc:creator&gt;&lt;![CDATA[]]&gt;&lt;/dc:creator&gt;
+
+    &lt;category&gt;&lt;![CDATA[podcast]]&gt;&lt;/category&gt;
+
+
+    &lt;category&gt;&lt;![CDATA[syncthing]]&gt;&lt;/category&gt;
+
+    &lt;category&gt;&lt;![CDATA[resilio]]&gt;&lt;/category&gt;
+
+    &lt;category&gt;&lt;![CDATA[dukto]]&gt;&lt;/category&gt;
+
+    &lt;category&gt;&lt;![CDATA[sincronización carpetas]]&gt;&lt;/category&gt;
+
+    &lt;category&gt;&lt;![CDATA[podcast]]&gt;&lt;/category&gt;
+
+    &lt;guid isPermaLink="</span><span class="kp">true</span><span class="s2">"&gt;http://192.168.1.108:4000/podcast/2017/04/21/046-sincronizacion-carpetas-syncthing-resilio-dukto.html&lt;/guid&gt;
+    &lt;description&gt;
+        &lt;![CDATA[Publicado por Angel Tags: , dukto , podcast , resilio , sincronización carpetas , syncthing , Suscribete al Blog RSS del Blog Suscribete al Podcast RSS ITunes ivoox Descargar Podcast En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones. Syncthing...]]&gt;
+    &lt;/description&gt;
+    &lt;content:encoded&gt;
+        &lt;![CDATA[&lt;h3 id="</span><span class="n">publicado</span><span class="o">-</span><span class="n">por</span><span class="o">-</span><span class="n">angel</span><span class="s2">"&gt;Publicado por Angel&lt;/h3&gt;
+&lt;p&gt;Tags:   , &lt;span class="</span><span class="n">tag</span><span class="s2">"&gt;&lt;a href="</span><span class="o">/</span><span class="n">tag2</span><span class="c1">#dukto"&gt;dukto&lt;/a&gt;&lt;/span&gt;  , &lt;span class="tag"&gt;&lt;a href="/tag2#podcast"&gt;podcast&lt;/a&gt;&lt;/span&gt;  , &lt;span class="tag"&gt;&lt;a href="/tag2#resilio"&gt;resilio&lt;/a&gt;&lt;/span&gt;  , &lt;span class="tag"&gt;&lt;a href="/tag2#sincronización carpetas"&gt;sincronización carpetas&lt;/a&gt;&lt;/span&gt;  , &lt;span class="tag"&gt;&lt;a href="/tag2#syncthing"&gt;syncthing&lt;/a&gt;&lt;/span&gt; ,&lt;/p&gt;</span>
+
+<span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">tbody</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="no">Suscribete</span> <span class="n">al</span> <span class="no">Blog</span><span class="o">&lt;</span><span class="sr">/td&gt;
+      &lt;td&gt;&lt;a href="http:/</span><span class="o">/</span><span class="n">feeds</span><span class="p">.</span><span class="nf">feedburner</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">uGeekBlog</span><span class="s2">"&gt;RSS del Blog&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Suscribete al Podcast&lt;/td&gt;
+      &lt;td&gt;&lt;a href="</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">feeds</span><span class="p">.</span><span class="nf">feedburner</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ugeek</span><span class="s2">"&gt;RSS&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">itunes</span><span class="p">.</span><span class="nf">apple</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">us</span><span class="o">/</span><span class="n">podcast</span><span class="o">/</span><span class="n">ugeek</span><span class="o">/</span><span class="n">id1201421866?mt</span><span class="o">=</span><span class="mi">2</span><span class="s2">"&gt;ITunes&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">www</span><span class="p">.</span><span class="nf">ivoox</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">podcast</span><span class="o">-</span><span class="n">ugeek_sq_f1383493_1</span><span class="p">.</span><span class="nf">html</span><span class="s2">"&gt;ivoox&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;!-- ---------------------------------------------------Pon aquí el audio-------------------------------------------------------- --&gt;
+&lt;p&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">ia601509</span><span class="p">.</span><span class="nf">us</span><span class="p">.</span><span class="nf">archive</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="n">items</span><span class="o">/</span><span class="mo">046</span><span class="no">SyncthingResilioYDukto</span><span class="o">/%</span><span class="mi">23046</span><span class="o">%</span><span class="mi">20</span><span class="no">Syncthing</span><span class="o">%</span><span class="mi">2</span><span class="n">c</span><span class="o">%</span><span class="mi">20</span><span class="no">Resilio</span><span class="o">%</span><span class="mi">20</span><span class="n">y</span><span class="o">%</span><span class="mi">20</span><span class="no">Dukto</span><span class="o">%</span><span class="mi">20</span><span class="p">.</span><span class="nf">mp3</span><span class="s2">"&gt;Descargar Podcast&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">archive</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span><span class="n">embed</span><span class="o">/</span><span class="mo">046</span><span class="no">SyncthingResilioYDukto</span><span class="s2">" width="</span><span class="mi">100</span><span class="o">%</span><span class="s2">" height="</span><span class="mi">140</span><span class="s2">" frameborder="</span><span class="mi">0</span><span class="s2">" webkitallowfullscreen="</span><span class="kp">true</span><span class="s2">" mozallowfullscreen="</span><span class="kp">true</span><span class="s2">" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;!-- ----------------------------------------------------Inicio de comentarios--------------------------------------------------- --&gt;
+
+&lt;p&gt;En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">syncthing</span><span class="p">.</span><span class="nf">net</span><span class="o">/</span><span class="s2">"&gt;Syncthing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">www</span><span class="p">.</span><span class="nf">resilio</span><span class="p">.</span><span class="nf">com</span><span class="s2">"&gt;Resilio&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">www</span><span class="p">.</span><span class="nf">msec</span><span class="p">.</span><span class="nf">it</span><span class="o">/</span><span class="n">blog</span><span class="o">/</span><span class="p">?</span><span class="n">page_id</span><span class="o">=</span><span class="mi">11</span><span class="s2">"&gt;Dukto&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Muchas grácias a atareao.es y compilando podcast, por mencionar el podcast en los post y añadir los episodios en la rádio online.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">www</span><span class="p">.</span><span class="nf">atareao</span><span class="p">.</span><span class="nf">es</span><span class="o">/</span><span class="n">otros</span><span class="o">/</span><span class="n">podcast</span><span class="o">-</span><span class="n">de</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">y</span><span class="o">-</span><span class="n">software</span><span class="o">-</span><span class="n">libre</span><span class="s2">"&gt;Podcast del atareao.es&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">t</span><span class="p">.</span><span class="nf">co</span><span class="o">/</span><span class="n">l7Xqn1L2Oc</span><span class="s2">"&gt;Compilando Podcast&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- -------------------------------------Aquí abajo los comentarios -------------------------------------------  --&gt;
+
+&lt;div id="</span><span class="n">disqus_thread</span><span class="s2">"&gt;&lt;/div&gt;
+&lt;script&gt;
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-angelbcn-github-io-ugeek.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">disqus</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="p">?</span><span class="n">ref_noscript</span><span class="s2">"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+&lt;script id="</span><span class="n">dsq</span><span class="o">-</span><span class="n">count</span><span class="o">-</span><span class="n">scr</span><span class="s2">" src="</span><span class="o">/</span><span class="sr">/https-angelbcn-github-io-ugeek.disqus.com/</span><span class="n">count</span><span class="p">.</span><span class="nf">js</span><span class="s2">" async=""&gt;&lt;/script&gt;
+
+]]&gt;
+    &lt;/content:encoded&gt;
+
+    &lt;enclosure url="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">ia601509</span><span class="p">.</span><span class="nf">us</span><span class="p">.</span><span class="nf">archive</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="n">items</span><span class="o">/</span><span class="mo">046</span><span class="no">SyncthingResilioYDukto</span><span class="o">/%</span><span class="mi">23046</span><span class="o">%</span><span class="mi">20</span><span class="no">Syncthing</span><span class="o">%</span><span class="mi">2</span><span class="n">c</span><span class="o">%</span><span class="mi">20</span><span class="no">Resilio</span><span class="o">%</span><span class="mi">20</span><span class="n">y</span><span class="o">%</span><span class="mi">20</span><span class="no">Dukto</span><span class="o">%</span><span class="mi">20</span><span class="p">.</span><span class="nf">mp3</span><span class="s2">" length="" type="</span><span class="n">audio</span><span class="o">/</span><span class="n">mpeg</span><span class="s2">" /&gt;
+    &lt;itunes:subtitle&gt;&lt;![CDATA[Publicado por Angel Tags: , dukto , podcast , resilio , sincronización carpetas , syncthing , Suscribete al Blog RSS del Blog Suscribete al Podcast RSS ITunes ivoox Descargar Podcast En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones. Syncthing...]]&gt;&lt;/itunes:subtitle&gt;
+    &lt;itunes:summary&gt;&lt;![CDATA[&lt;h3 id="</span><span class="n">publicado</span><span class="o">-</span><span class="n">por</span><span class="o">-</span><span class="n">angel</span><span class="s2">"&gt;Publicado por Angel&lt;/h3&gt;
+&lt;p&gt;Tags:   , &lt;span class="</span><span class="n">tag</span><span class="s2">"&gt;&lt;a href="</span><span class="o">/</span><span class="n">tag2</span><span class="c1">#dukto"&gt;dukto&lt;/a&gt;&lt;/span&gt;  , &lt;span class="tag"&gt;&lt;a href="/tag2#podcast"&gt;podcast&lt;/a&gt;&lt;/span&gt;  , &lt;span class="tag"&gt;&lt;a href="/tag2#resilio"&gt;resilio&lt;/a&gt;&lt;/span&gt;  , &lt;span class="tag"&gt;&lt;a href="/tag2#sincronización carpetas"&gt;sincronización carpetas&lt;/a&gt;&lt;/span&gt;  , &lt;span class="tag"&gt;&lt;a href="/tag2#syncthing"&gt;syncthing&lt;/a&gt;&lt;/span&gt; ,&lt;/p&gt;</span>
+
+<span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">tbody</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="no">Suscribete</span> <span class="n">al</span> <span class="no">Blog</span><span class="o">&lt;</span><span class="sr">/td&gt;
+      &lt;td&gt;&lt;a href="http:/</span><span class="o">/</span><span class="n">feeds</span><span class="p">.</span><span class="nf">feedburner</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">uGeekBlog</span><span class="s2">"&gt;RSS del Blog&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Suscribete al Podcast&lt;/td&gt;
+      &lt;td&gt;&lt;a href="</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">feeds</span><span class="p">.</span><span class="nf">feedburner</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ugeek</span><span class="s2">"&gt;RSS&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">itunes</span><span class="p">.</span><span class="nf">apple</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">us</span><span class="o">/</span><span class="n">podcast</span><span class="o">/</span><span class="n">ugeek</span><span class="o">/</span><span class="n">id1201421866?mt</span><span class="o">=</span><span class="mi">2</span><span class="s2">"&gt;ITunes&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">www</span><span class="p">.</span><span class="nf">ivoox</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">podcast</span><span class="o">-</span><span class="n">ugeek_sq_f1383493_1</span><span class="p">.</span><span class="nf">html</span><span class="s2">"&gt;ivoox&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;!-- ---------------------------------------------------Pon aquí el audio-------------------------------------------------------- --&gt;
+&lt;p&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">ia601509</span><span class="p">.</span><span class="nf">us</span><span class="p">.</span><span class="nf">archive</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="n">items</span><span class="o">/</span><span class="mo">046</span><span class="no">SyncthingResilioYDukto</span><span class="o">/%</span><span class="mi">23046</span><span class="o">%</span><span class="mi">20</span><span class="no">Syncthing</span><span class="o">%</span><span class="mi">2</span><span class="n">c</span><span class="o">%</span><span class="mi">20</span><span class="no">Resilio</span><span class="o">%</span><span class="mi">20</span><span class="n">y</span><span class="o">%</span><span class="mi">20</span><span class="no">Dukto</span><span class="o">%</span><span class="mi">20</span><span class="p">.</span><span class="nf">mp3</span><span class="s2">"&gt;Descargar Podcast&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">archive</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span><span class="n">embed</span><span class="o">/</span><span class="mo">046</span><span class="no">SyncthingResilioYDukto</span><span class="s2">" width="</span><span class="mi">100</span><span class="o">%</span><span class="s2">" height="</span><span class="mi">140</span><span class="s2">" frameborder="</span><span class="mi">0</span><span class="s2">" webkitallowfullscreen="</span><span class="kp">true</span><span class="s2">" mozallowfullscreen="</span><span class="kp">true</span><span class="s2">" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;!-- ----------------------------------------------------Inicio de comentarios--------------------------------------------------- --&gt;
+
+&lt;p&gt;En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">syncthing</span><span class="p">.</span><span class="nf">net</span><span class="o">/</span><span class="s2">"&gt;Syncthing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">www</span><span class="p">.</span><span class="nf">resilio</span><span class="p">.</span><span class="nf">com</span><span class="s2">"&gt;Resilio&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">www</span><span class="p">.</span><span class="nf">msec</span><span class="p">.</span><span class="nf">it</span><span class="o">/</span><span class="n">blog</span><span class="o">/</span><span class="p">?</span><span class="n">page_id</span><span class="o">=</span><span class="mi">11</span><span class="s2">"&gt;Dukto&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Muchas grácias a atareao.es y compilando podcast, por mencionar el podcast en los post y añadir los episodios en la rádio online.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">www</span><span class="p">.</span><span class="nf">atareao</span><span class="p">.</span><span class="nf">es</span><span class="o">/</span><span class="n">otros</span><span class="o">/</span><span class="n">podcast</span><span class="o">-</span><span class="n">de</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">y</span><span class="o">-</span><span class="n">software</span><span class="o">-</span><span class="n">libre</span><span class="s2">"&gt;Podcast del atareao.es&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">t</span><span class="p">.</span><span class="nf">co</span><span class="o">/</span><span class="n">l7Xqn1L2Oc</span><span class="s2">"&gt;Compilando Podcast&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- -------------------------------------Aquí abajo los comentarios -------------------------------------------  --&gt;
+
+&lt;div id="</span><span class="n">disqus_thread</span><span class="s2">"&gt;&lt;/div&gt;
+&lt;script&gt;
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-angelbcn-github-io-ugeek.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">disqus</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="p">?</span><span class="n">ref_noscript</span><span class="s2">"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+&lt;script id="</span><span class="n">dsq</span><span class="o">-</span><span class="n">count</span><span class="o">-</span><span class="n">scr</span><span class="s2">" src="</span><span class="o">/</span><span class="sr">/https-angelbcn-github-io-ugeek.disqus.com/</span><span class="n">count</span><span class="p">.</span><span class="nf">js</span><span class="s2">" async=""&gt;&lt;/script&gt;
+
+]]&gt;&lt;/itunes:summary&gt;
+    &lt;itunes:author&gt;&lt;/itunes:author&gt;
+    &lt;itunes:image href="</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">108</span><span class="p">:</span><span class="mi">4000</span><span class="s2">" /&gt;
+    &lt;itunes:explicit&gt;&lt;/itunes:explicit&gt;
+    &lt;itunes:duration&gt;&lt;/itunes:duration&gt;
+  &lt;/item&gt;
+
+&lt;/channel&gt;
+&lt;/rss&gt;</span></code></pre></figure>
+
+<ul>
+  <li>Añadimos en el archivo <code class="highlighter-rouge">_config.yml</code>, el siguiente contenido:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Podcast Feed Settings</span>
+<span class="ss">podcast_url: </span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">ugeek</span><span class="p">.</span><span class="nf">github</span><span class="p">.</span><span class="nf">io</span>
+<span class="ss">podcast_album_art: </span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">ugeek</span><span class="p">.</span><span class="nf">github</span><span class="p">.</span><span class="nf">io</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="n">ugeek</span><span class="p">.</span><span class="nf">png</span>
+<span class="ss">podcast_title: </span><span class="n">uGeek</span>
+<span class="ss">podcast_owner: </span><span class="no">Angel</span>
+<span class="ss">podcast_email: </span><span class="n">ugeekpodcast</span><span class="vi">@gmail</span><span class="p">.</span><span class="nf">com</span>
+<span class="ss">podcast_category: </span><span class="no">Technology</span>
+<span class="ss">podcast_subcategory_one: </span><span class="no">Linux</span>
+<span class="ss">podcast_subcategory_two: </span><span class="no">Gadgets</span>
+<span class="ss">podcast_explicit: </span><span class="s2">"no"</span>
+<span class="ss">podcast_author: </span><span class="no">Angel</span>
+<span class="ss">podcast_description: </span><span class="no">Podcast</span> <span class="n">de</span> <span class="no">Tecnolog</span><span class="err">í</span><span class="n">a</span> <span class="n">en</span> <span class="n">el</span> <span class="n">que</span> <span class="n">hablo</span> <span class="n">de</span> <span class="no">GNU</span><span class="o">/</span><span class="no">Linux</span><span class="p">,</span> <span class="no">Raspberry</span> <span class="no">Pi</span><span class="p">,</span> <span class="n">servidores</span> <span class="n">y</span> <span class="n">tecnolog</span><span class="err">í</span><span class="n">a</span> <span class="n">en</span> <span class="n">general</span><span class="p">.</span>
+<span class="nf">podcast_summary</span><span class="p">:</span> <span class="no">Podcast</span> <span class="n">de</span> <span class="no">Tecnolog</span><span class="err">í</span><span class="n">a</span> <span class="n">en</span> <span class="n">el</span> <span class="n">que</span> <span class="n">hablo</span> <span class="n">de</span> <span class="no">GNU</span><span class="o">/</span><span class="no">Linux</span><span class="p">,</span> <span class="no">Raspberry</span> <span class="no">Pi</span><span class="p">,</span> <span class="n">servidores</span> <span class="n">y</span> <span class="n">tecnolog</span><span class="err">í</span><span class="n">a</span> <span class="n">en</span> <span class="n">general</span><span class="p">.</span>
+<span class="nf">podcast_subtitle</span><span class="p">:</span> <span class="no">Podcast</span> <span class="n">de</span> <span class="no">Tecnolog</span><span class="err">í</span><span class="n">a</span> <span class="n">en</span> <span class="n">el</span> <span class="n">que</span> <span class="n">hablo</span> <span class="n">de</span> <span class="no">GNU</span><span class="o">/</span><span class="no">Linux</span><span class="p">,</span> <span class="no">Raspberry</span> <span class="no">Pi</span><span class="p">,</span> <span class="n">servidores</span> <span class="n">y</span> <span class="n">tecnolog</span><span class="err">í</span><span class="n">a</span> <span class="n">en</span> <span class="n">general</span><span class="o">.</span></code></pre></figure>
+
+<ul>
+  <li>Por último, añadiremos en cada post, que es un podcast, el link del mp3, imagen, tags, etc…</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">---</span>
+<span class="ss">layout: </span><span class="n">post</span>
+<span class="ss">title: </span><span class="s2">"046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto"</span>
+<span class="ss">date: </span><span class="mi">2017</span><span class="o">-</span><span class="mo">04</span><span class="o">-</span><span class="mi">21</span>
+<span class="ss">categories: </span><span class="n">podcast</span>
+<span class="ss">image: </span><span class="n">img</span><span class="o">/</span><span class="n">ugeek</span><span class="p">.</span><span class="nf">png</span>
+<span class="ss">podcast_link: </span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">ia601509</span><span class="p">.</span><span class="nf">us</span><span class="p">.</span><span class="nf">archive</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="n">items</span><span class="o">/</span><span class="mo">046</span><span class="no">SyncthingResilioYDukto</span><span class="o">/%</span><span class="mi">23046</span><span class="o">%</span><span class="mi">20</span><span class="no">Syncthing</span><span class="o">%</span><span class="mi">2</span><span class="n">c</span><span class="o">%</span><span class="mi">20</span><span class="no">Resilio</span><span class="o">%</span><span class="mi">20</span><span class="n">y</span><span class="o">%</span><span class="mi">20</span><span class="no">Dukto</span><span class="o">%</span><span class="mi">20</span><span class="p">.</span><span class="nf">mp3</span>
+<span class="ss">tags: </span><span class="p">[</span><span class="n">syncthing</span><span class="p">,</span> <span class="n">resilio</span><span class="p">,</span> <span class="n">dukto</span><span class="p">,</span> <span class="n">sincronizaci</span><span class="err">ó</span><span class="n">n</span> <span class="n">carpetas</span><span class="p">,</span> <span class="n">podcast</span><span class="p">]</span>
+<span class="ss">comments: </span><span class="kp">true</span>
+<span class="o">---</span></code></pre></figure>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">uGeek</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              uGeek
+            
+            </li>
+            
+            <li><a href="mailto:ugeekpodcast@gmail.com">ugeekpodcast@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
