@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>uGeek</title>
+ <link href="http://192.168.1.108:4000/atom.xml" rel="self"/>
+ <id>http://192.168.1.108:4000</id>
+ <updated>2017-04-24T19:44:56+00:00</updated>
+ <author>
+   <name></name>
+   <uri></uri>
+   <email></email>
+ </author>
+
+ 
+
+ <entry>
+   <title>Welcome to Jekyll!</title>
+   <link href="http://192.168.1.108:4000/jekyll/update/2017/04/24/welcome-to-jekyll.html"/>
+   <id>http://192.168.1.108:4000/jekyll/update/2017/04/24/welcome-to-jekyll</id>
+   <updated>2017-04-24T17:58:35+00:00</updated>
+   <content type="html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Crear el Feed para el podcast en tu Blog con Jekyll</title>
+   <link href="http://192.168.1.108:4000/2017/04/24/generar-feed-para-podcast-en-jekyll.html"/>
+   <id>http://192.168.1.108:4000/2017/04/24/generar-feed-para-podcast-en-jekyll</id>
+   <updated>2017-04-24T00:00:00+00:00</updated>
+   <content type="html">&lt;h1 id=&quot;publicado-por-angel&quot;&gt;Publicado por Angel&lt;/h1&gt; &lt;p&gt;Voy a explicar en este post, como generar el Feed del podcast de forma automática.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Creamos un archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;podcast.xml&lt;/code&gt; en la raiz, con el siguiente contenido:&lt;/li&gt; &lt;/ul&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;layout: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;---&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto</title>
+   <link href="http://192.168.1.108:4000/podcast/2017/04/21/p046.html"/>
+   <id>http://192.168.1.108:4000/podcast/2017/04/21/p046</id>
+   <updated>2017-04-21T00:00:00+00:00</updated>
+   <content type="html">&lt;h3 id=&quot;publicado-por-angel&quot;&gt;Publicado por Angel&lt;/h3&gt; &lt;p&gt;Tags: , &lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;/tag2#dukto&quot;&gt;dukto&lt;/a&gt;&lt;/span&gt; , &lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;/tag2#podcast&quot;&gt;podcast&lt;/a&gt;&lt;/span&gt; , &lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;/tag2#resilio&quot;&gt;resilio&lt;/a&gt;&lt;/span&gt; , &lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;/tag2#sincronización carpetas&quot;&gt;sincronización carpetas&lt;/a&gt;&lt;/span&gt; , &lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;/tag2#syncthing&quot;&gt;syncthing&lt;/a&gt;&lt;/span&gt; ,&lt;/p&gt; &lt;table&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;Suscribete al Blog&lt;/td&gt; &lt;td&gt;&lt;a href=&quot;http://feeds.feedburner.com/uGeekBlog&quot;&gt;RSS del Blog&lt;/a&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;table&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;Suscribete al Podcast&lt;/td&gt; &lt;td&gt;&lt;a href=&quot;http://feeds.feedburner.com/ugeek&quot;&gt;RSS&lt;/a&gt;&lt;/td&gt; &lt;td&gt;&lt;a...</content>
+ </entry>
+
+ 
+
+</feed>

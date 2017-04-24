@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://192.168.1.108:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://192.168.1.108:4000/" rel="alternate" type="text/html" /><updated>2017-04-24T19:44:56+00:00</updated><id>http://192.168.1.108:4000/</id><title type="html">uGeek</title><subtitle>Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://192.168.1.108:4000/jekyll/update/2017/04/24/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-04-24T17:58:35+00:00</published><updated>2017-04-24T17:58:35+00:00</updated><id>http://192.168.1.108:4000/jekyll/update/2017/04/24/welcome-to-jekyll</id><content type="html" xml:base="http://192.168.1.108:4000/jekyll/update/2017/04/24/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Crear el Feed para el podcast en tu Blog con Jekyll</title><link href="http://192.168.1.108:4000/2017/04/24/generar-feed-para-podcast-en-jekyll.html" rel="alternate" type="text/html" title="Crear el Feed para el podcast en tu Blog con Jekyll" /><published>2017-04-24T00:00:00+00:00</published><updated>2017-04-24T00:00:00+00:00</updated><id>http://192.168.1.108:4000/2017/04/24/generar-feed-para-podcast-en-jekyll</id><content type="html" xml:base="http://192.168.1.108:4000/2017/04/24/generar-feed-para-podcast-en-jekyll.html">&lt;h1 id=&quot;publicado-por-angel&quot;&gt;Publicado por Angel&lt;/h1&gt;
+
+&lt;p&gt;Voy a explicar en este post, como generar el Feed del podcast de forma automática.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Creamos un archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;podcast.xml&lt;/code&gt; en la raiz, con el siguiente contenido:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;layout: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;null&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1.0&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rss&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2.0&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://purl.org/rss/1.0/modules/content/&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:wfw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://wellformedweb.org/CommentAPI/&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:dc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://purl.org/dc/elements/1.1/&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:atom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://www.w3.org/2005/Atom&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:sy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://purl.org/rss/1.0/modules/syndication/&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:slash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://purl.org/rss/1.0/modules/slash/&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:itunes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:rawvoice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://www.rawvoice.com/rawvoiceRssModule/&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+ 
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;channel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/title&amp;gt;
+&amp;lt;atom:link href=&quot;http:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;192&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;168&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;108&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;podcast&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; rel=&quot;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; type=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; /&amp;gt;
+&amp;lt;link&amp;gt;http://192.168.1.108:4000&amp;lt;/link&amp;gt;
+&amp;lt;description&amp;gt;&amp;lt;/description&amp;gt;
+&amp;lt;lastBuildDate&amp;gt;Mon, 24 Apr 2017 19:44:56 +0000&amp;lt;/lastBuildDate&amp;gt;
+&amp;lt;language&amp;gt;es-es&amp;lt;/language&amp;gt;
+&amp;lt;sy:updatePeriod&amp;gt;hourly&amp;lt;/sy:updatePeriod&amp;gt;
+&amp;lt;sy:updateFrequency&amp;gt;1&amp;lt;/sy:updateFrequency&amp;gt;
+&amp;lt;generator&amp;gt;http://jekyllrb.com&amp;lt;/generator&amp;gt;
+&amp;lt;itunes:summary&amp;gt;&amp;lt;/itunes:summary&amp;gt;
+&amp;lt;itunes:author&amp;gt;&amp;lt;/itunes:author&amp;gt;
+&amp;lt;itunes:explicit&amp;gt;&amp;lt;/itunes:explicit&amp;gt;
+&amp;lt;itunes:image href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;192&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;168&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;108&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4000&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; /&amp;gt;
+&amp;lt;itunes:owner&amp;gt;
+&amp;lt;itunes:name&amp;gt;&amp;lt;/itunes:name&amp;gt;
+&amp;lt;itunes:email&amp;gt;&amp;lt;/itunes:email&amp;gt;
+&amp;lt;/itunes:owner&amp;gt;
+&amp;lt;managingEditor&amp;gt; ()&amp;lt;/managingEditor&amp;gt;
+&amp;lt;itunes:subtitle&amp;gt;&amp;lt;/itunes:subtitle&amp;gt;
+&amp;lt;image&amp;gt;
+&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+&amp;lt;url&amp;gt;http://192.168.1.108:4000&amp;lt;/url&amp;gt;
+&amp;lt;link&amp;gt;http://192.168.1.108:4000&amp;lt;/link&amp;gt;
+&amp;lt;/image&amp;gt;
+&amp;lt;itunes:category text=&quot;&quot;&amp;gt;
+&amp;lt;itunes:category text=&quot;&quot; /&amp;gt;
+&amp;lt;itunes:category text=&quot;&quot; /&amp;gt;
+&amp;lt;/itunes:category&amp;gt;
+
+  &amp;lt;item&amp;gt;
+    &amp;lt;title&amp;gt;046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto&amp;lt;/title&amp;gt;
+    &amp;lt;link&amp;gt;http://192.168.1.108:4000/podcast/2017/04/21/p046.html&amp;lt;/link&amp;gt;
+    &amp;lt;comments&amp;gt;http://192.168.1.108:4000/podcast/2017/04/21/p046.html#comments&amp;lt;/comments&amp;gt;
+    &amp;lt;pubDate&amp;gt;Fri, 21 Apr 2017 00:00:00 +0000&amp;lt;/pubDate&amp;gt;
+    &amp;lt;dc:creator&amp;gt;&amp;lt;![CDATA[]]&amp;gt;&amp;lt;/dc:creator&amp;gt;
+
+    &amp;lt;category&amp;gt;&amp;lt;![CDATA[podcast]]&amp;gt;&amp;lt;/category&amp;gt;
+
+
+    &amp;lt;category&amp;gt;&amp;lt;![CDATA[syncthing]]&amp;gt;&amp;lt;/category&amp;gt;
+
+    &amp;lt;category&amp;gt;&amp;lt;![CDATA[resilio]]&amp;gt;&amp;lt;/category&amp;gt;
+
+    &amp;lt;category&amp;gt;&amp;lt;![CDATA[dukto]]&amp;gt;&amp;lt;/category&amp;gt;
+
+    &amp;lt;category&amp;gt;&amp;lt;![CDATA[sincronización carpetas]]&amp;gt;&amp;lt;/category&amp;gt;
+
+    &amp;lt;category&amp;gt;&amp;lt;![CDATA[podcast]]&amp;gt;&amp;lt;/category&amp;gt;
+
+    &amp;lt;guid isPermaLink=&quot;&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;http://192.168.1.108:4000/podcast/2017/04/21/p046.html&amp;lt;/guid&amp;gt;
+    &amp;lt;description&amp;gt;
+        &amp;lt;![CDATA[Publicado por Angel Tags: , dukto , podcast , resilio , sincronización carpetas , syncthing , Suscribete al Blog RSS del Blog Suscribete al Podcast RSS ITunes ivoox Descargar Podcast En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones. Syncthing...]]&amp;gt;
+    &amp;lt;/description&amp;gt;
+    &amp;lt;content:encoded&amp;gt;
+        &amp;lt;![CDATA[&amp;lt;h3 id=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;publicado&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;por&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;angel&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Publicado por Angel&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;Tags:   , &amp;lt;span class=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag2&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#dukto&quot;&amp;gt;dukto&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;  , &amp;lt;span class=&quot;tag&quot;&amp;gt;&amp;lt;a href=&quot;/tag2#podcast&quot;&amp;gt;podcast&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;  , &amp;lt;span class=&quot;tag&quot;&amp;gt;&amp;lt;a href=&quot;/tag2#resilio&quot;&amp;gt;resilio&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;  , &amp;lt;span class=&quot;tag&quot;&amp;gt;&amp;lt;a href=&quot;/tag2#sincronización carpetas&quot;&amp;gt;sincronización carpetas&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;  , &amp;lt;span class=&quot;tag&quot;&amp;gt;&amp;lt;a href=&quot;/tag2#syncthing&quot;&amp;gt;syncthing&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt; ,&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tbody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Suscribete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Blog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;a href=&quot;http:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feeds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;feedburner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uGeekBlog&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;RSS del Blog&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+  &amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+&amp;lt;table&amp;gt;
+  &amp;lt;tbody&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;td&amp;gt;Suscribete al Podcast&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feeds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;feedburner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeek&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;RSS&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itunes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;us&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;podcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeek&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id1201421866?mt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;ITunes&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ivoox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;podcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeek_sq_f1383493_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;ivoox&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+  &amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+&amp;lt;!-- ---------------------------------------------------Pon aquí el audio-------------------------------------------------------- --&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ia601509&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;us&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;archive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;046&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SyncthingResilioYDukto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23046&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Syncthing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Resilio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Dukto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mp3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Descargar Podcast&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;iframe src=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;archive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;embed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;046&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SyncthingResilioYDukto&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; width=&quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; height=&quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;140&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; frameborder=&quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; webkitallowfullscreen=&quot;&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; mozallowfullscreen=&quot;&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; allowfullscreen=&quot;&quot;&amp;gt;&amp;lt;/iframe&amp;gt;
+&amp;lt;!-- ----------------------------------------------------Inicio de comentarios--------------------------------------------------- --&amp;gt;
+
+&amp;lt;p&amp;gt;En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;syncthing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Syncthing&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;resilio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Resilio&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;msec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Dukto&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Muchas grácias a atareao.es y compilando podcast, por mencionar el podcast en los post y añadir los episodios en la rádio online.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;atareao&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;es&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;otros&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;podcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;de&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;software&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;libre&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Podcast del atareao.es&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;co&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l7Xqn1L2Oc&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Compilando Podcast&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;!-- -------------------------------------Aquí abajo los comentarios -------------------------------------------  --&amp;gt;
+
+&amp;lt;div id=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disqus_thread&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-angelbcn-github-io-ugeek.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&amp;lt;/script&amp;gt;
+
+&amp;lt;noscript&amp;gt;Please enable JavaScript to view the &amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disqus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ref_noscript&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;comments powered by Disqus.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
+
+&amp;lt;script id=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dsq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scr&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; src=&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/https-angelbcn-github-io-ugeek.disqus.com/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; async=&quot;&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+]]&amp;gt;
+    &amp;lt;/content:encoded&amp;gt;
+
+    &amp;lt;enclosure url=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ia601509&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;us&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;archive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;046&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SyncthingResilioYDukto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23046&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Syncthing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Resilio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Dukto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mp3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; length=&quot;&quot; type=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mpeg&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; /&amp;gt;
+    &amp;lt;itunes:subtitle&amp;gt;&amp;lt;![CDATA[Publicado por Angel Tags: , dukto , podcast , resilio , sincronización carpetas , syncthing , Suscribete al Blog RSS del Blog Suscribete al Podcast RSS ITunes ivoox Descargar Podcast En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones. Syncthing...]]&amp;gt;&amp;lt;/itunes:subtitle&amp;gt;
+    &amp;lt;itunes:summary&amp;gt;&amp;lt;![CDATA[&amp;lt;h3 id=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;publicado&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;por&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;angel&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Publicado por Angel&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;Tags:   , &amp;lt;span class=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag2&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#dukto&quot;&amp;gt;dukto&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;  , &amp;lt;span class=&quot;tag&quot;&amp;gt;&amp;lt;a href=&quot;/tag2#podcast&quot;&amp;gt;podcast&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;  , &amp;lt;span class=&quot;tag&quot;&amp;gt;&amp;lt;a href=&quot;/tag2#resilio&quot;&amp;gt;resilio&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;  , &amp;lt;span class=&quot;tag&quot;&amp;gt;&amp;lt;a href=&quot;/tag2#sincronización carpetas&quot;&amp;gt;sincronización carpetas&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;  , &amp;lt;span class=&quot;tag&quot;&amp;gt;&amp;lt;a href=&quot;/tag2#syncthing&quot;&amp;gt;syncthing&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt; ,&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tbody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Suscribete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Blog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;a href=&quot;http:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feeds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;feedburner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uGeekBlog&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;RSS del Blog&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+  &amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+&amp;lt;table&amp;gt;
+  &amp;lt;tbody&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;td&amp;gt;Suscribete al Podcast&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feeds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;feedburner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeek&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;RSS&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itunes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;us&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;podcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeek&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id1201421866?mt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;ITunes&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ivoox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;podcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeek_sq_f1383493_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;ivoox&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+  &amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+&amp;lt;!-- ---------------------------------------------------Pon aquí el audio-------------------------------------------------------- --&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ia601509&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;us&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;archive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;046&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SyncthingResilioYDukto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23046&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Syncthing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Resilio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Dukto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mp3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Descargar Podcast&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;iframe src=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;archive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;embed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;046&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SyncthingResilioYDukto&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; width=&quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; height=&quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;140&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; frameborder=&quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; webkitallowfullscreen=&quot;&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; mozallowfullscreen=&quot;&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; allowfullscreen=&quot;&quot;&amp;gt;&amp;lt;/iframe&amp;gt;
+&amp;lt;!-- ----------------------------------------------------Inicio de comentarios--------------------------------------------------- --&amp;gt;
+
+&amp;lt;p&amp;gt;En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;syncthing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Syncthing&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;resilio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Resilio&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;msec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Dukto&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Muchas grácias a atareao.es y compilando podcast, por mencionar el podcast en los post y añadir los episodios en la rádio online.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;atareao&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;es&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;otros&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;podcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;de&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;software&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;libre&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Podcast del atareao.es&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;co&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l7Xqn1L2Oc&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;Compilando Podcast&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;!-- -------------------------------------Aquí abajo los comentarios -------------------------------------------  --&amp;gt;
+
+&amp;lt;div id=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disqus_thread&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-angelbcn-github-io-ugeek.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&amp;lt;/script&amp;gt;
+
+&amp;lt;noscript&amp;gt;Please enable JavaScript to view the &amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disqus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ref_noscript&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;comments powered by Disqus.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
+
+&amp;lt;script id=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dsq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scr&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; src=&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/https-angelbcn-github-io-ugeek.disqus.com/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; async=&quot;&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+]]&amp;gt;&amp;lt;/itunes:summary&amp;gt;
+    &amp;lt;itunes:author&amp;gt;&amp;lt;/itunes:author&amp;gt;
+    &amp;lt;itunes:image href=&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;192&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;168&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;108&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4000&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; /&amp;gt;
+    &amp;lt;itunes:explicit&amp;gt;&amp;lt;/itunes:explicit&amp;gt;
+    &amp;lt;itunes:duration&amp;gt;&amp;lt;/itunes:duration&amp;gt;
+  &amp;lt;/item&amp;gt;
+
+&amp;lt;/channel&amp;gt;
+&amp;lt;/rss&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Añadimos en el archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, el siguiente contenido:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Podcast Feed Settings&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_url: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeek&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;io&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_album_art: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeek&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeek&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;png&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_title: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uGeek&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_owner: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Angel&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_email: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeekpodcast&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@gmail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_category: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Technology&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_subcategory_one: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Linux&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_subcategory_two: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Gadgets&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_explicit: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;no&quot;&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_author: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Angel&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_description: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Podcast&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Tecnolog&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;í&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;en&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;el&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;que&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hablo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;GNU&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Linux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Raspberry&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;servidores&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tecnolog&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;í&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;en&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;general&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;podcast_summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Podcast&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Tecnolog&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;í&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;en&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;el&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;que&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hablo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;GNU&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Linux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Raspberry&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;servidores&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tecnolog&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;í&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;en&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;general&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;podcast_subtitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Podcast&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Tecnolog&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;í&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;en&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;el&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;que&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hablo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;GNU&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Linux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Raspberry&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;servidores&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tecnolog&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;í&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;en&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;general&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Por último, añadiremos en cada post, que es un podcast, el link del mp3, imagen, tags, etc…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;layout: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;title: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto&quot;&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;date: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2017&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;categories: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;podcast&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;image: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ugeek&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;png&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;podcast_link: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ia601509&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;us&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;archive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;046&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SyncthingResilioYDukto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23046&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Syncthing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Resilio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Dukto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mp3&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;tags: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;syncthing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resilio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dukto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sincronizaci&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ó&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carpetas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;podcast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;comments: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><category term="jekyll" /><category term="blog" /><category term="feed" /><category term="podcast" /><summary type="html">Publicado por Angel</summary></entry><entry><title type="html">046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto</title><link href="http://192.168.1.108:4000/podcast/2017/04/21/p046.html" rel="alternate" type="text/html" title="046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto" /><published>2017-04-21T00:00:00+00:00</published><updated>2017-04-21T00:00:00+00:00</updated><id>http://192.168.1.108:4000/podcast/2017/04/21/p046</id><content type="html" xml:base="http://192.168.1.108:4000/podcast/2017/04/21/p046.html">&lt;h3 id=&quot;publicado-por-angel&quot;&gt;Publicado por Angel&lt;/h3&gt;
+&lt;p&gt;Tags:   , &lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;/tag2#dukto&quot;&gt;dukto&lt;/a&gt;&lt;/span&gt;  , &lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;/tag2#podcast&quot;&gt;podcast&lt;/a&gt;&lt;/span&gt;  , &lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;/tag2#resilio&quot;&gt;resilio&lt;/a&gt;&lt;/span&gt;  , &lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;/tag2#sincronización carpetas&quot;&gt;sincronización carpetas&lt;/a&gt;&lt;/span&gt;  , &lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;/tag2#syncthing&quot;&gt;syncthing&lt;/a&gt;&lt;/span&gt; ,&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Suscribete al Blog&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://feeds.feedburner.com/uGeekBlog&quot;&gt;RSS del Blog&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Suscribete al Podcast&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://feeds.feedburner.com/ugeek&quot;&gt;RSS&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://itunes.apple.com/us/podcast/ugeek/id1201421866?mt=2&quot;&gt;ITunes&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.ivoox.com/podcast-ugeek_sq_f1383493_1.html&quot;&gt;ivoox&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;!-- ---------------------------------------------------Pon aquí el audio-------------------------------------------------------- --&gt;
+&lt;p&gt;&lt;a href=&quot;https://ia601509.us.archive.org/6/items/046SyncthingResilioYDukto/%23046%20Syncthing%2c%20Resilio%20y%20Dukto%20.mp3&quot;&gt;Descargar Podcast&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src=&quot;https://archive.org/embed/046SyncthingResilioYDukto&quot; width=&quot;100%&quot; height=&quot;140&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;!-- ----------------------------------------------------Inicio de comentarios--------------------------------------------------- --&gt;
+
+&lt;p&gt;En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://syncthing.net/&quot;&gt;Syncthing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.resilio.com&quot;&gt;Resilio&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.msec.it/blog/?page_id=11&quot;&gt;Dukto&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Muchas grácias a atareao.es y compilando podcast, por mencionar el podcast en los post y añadir los episodios en la rádio online.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.atareao.es/otros/podcast-de-linux-y-software-libre&quot;&gt;Podcast del atareao.es&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://t.co/l7Xqn1L2Oc&quot;&gt;Compilando Podcast&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- -------------------------------------Aquí abajo los comentarios -------------------------------------------  --&gt;
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-angelbcn-github-io-ugeek.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+&lt;script id=&quot;dsq-count-scr&quot; src=&quot;//https-angelbcn-github-io-ugeek.disqus.com/count.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="syncthing" /><category term="resilio" /><category term="dukto" /><category term="sincronización carpetas" /><category term="podcast" /><summary type="html">Publicado por Angel Tags: , dukto , podcast , resilio , sincronización carpetas , syncthing , Suscribete al Blog RSS del Blog Suscribete al Podcast RSS ITunes ivoox Descargar Podcast En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones. Syncthing Resilio Dukto Muchas grácias a atareao.es y compilando podcast, por mencionar el podcast en los post y añadir los episodios en la rádio online. Podcast del atareao.es Compilando Podcast Please enable JavaScript to view the comments powered by Disqus.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://192.168.1.108:4000/img/ugeek.png" /></entry></feed>

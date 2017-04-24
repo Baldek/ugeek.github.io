@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
+>
+ 
+<channel>
+<title></title>
+<atom:link href="http://192.168.1.108:4000/feed/podcast" rel="self" type="application/rss+xml" />
+<link>http://192.168.1.108:4000</link>
+<description></description>
+<lastBuildDate>Mon, 24 Apr 2017 19:44:56 +0000</lastBuildDate>
+<language>es-es</language>
+<sy:updatePeriod>hourly</sy:updatePeriod>
+<sy:updateFrequency>1</sy:updateFrequency>
+<generator>http://jekyllrb.com</generator>
+<itunes:summary></itunes:summary>
+<itunes:author></itunes:author>
+<itunes:explicit></itunes:explicit>
+<itunes:image href="http://192.168.1.108:4000" />
+<itunes:owner>
+<itunes:name></itunes:name>
+<itunes:email></itunes:email>
+</itunes:owner>
+<managingEditor> ()</managingEditor>
+<itunes:subtitle></itunes:subtitle>
+<image>
+<title></title>
+<url>http://192.168.1.108:4000</url>
+<link>http://192.168.1.108:4000</link>
+</image>
+<itunes:category text="">
+<itunes:category text="" />
+<itunes:category text="" />
+</itunes:category>
+
+  <item>
+    <title>046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto</title>
+    <link>http://192.168.1.108:4000/podcast/2017/04/21/p046.html</link>
+    <comments>http://192.168.1.108:4000/podcast/2017/04/21/p046.html#comments</comments>
+    <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
+    <dc:creator><![CDATA[]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <category><![CDATA[syncthing]]></category>
+
+    <category><![CDATA[resilio]]></category>
+
+    <category><![CDATA[dukto]]></category>
+
+    <category><![CDATA[sincronización carpetas]]></category>
+
+    <category><![CDATA[podcast]]></category>
+
+    <guid isPermaLink="true">http://192.168.1.108:4000/podcast/2017/04/21/p046.html</guid>
+    <description>
+        <![CDATA[Publicado por Angel Tags: , dukto , podcast , resilio , sincronización carpetas , syncthing , Suscribete al Blog RSS del Blog Suscribete al Podcast RSS ITunes ivoox Descargar Podcast En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones. Syncthing...]]>
+    </description>
+    <content:encoded>
+        <![CDATA[<h3 id="publicado-por-angel">Publicado por Angel</h3>
+<p>Tags:   , <span class="tag"><a href="/tag2#dukto">dukto</a></span>  , <span class="tag"><a href="/tag2#podcast">podcast</a></span>  , <span class="tag"><a href="/tag2#resilio">resilio</a></span>  , <span class="tag"><a href="/tag2#sincronización carpetas">sincronización carpetas</a></span>  , <span class="tag"><a href="/tag2#syncthing">syncthing</a></span> ,</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Suscribete al Blog</td>
+      <td><a href="http://feeds.feedburner.com/uGeekBlog">RSS del Blog</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Suscribete al Podcast</td>
+      <td><a href="http://feeds.feedburner.com/ugeek">RSS</a></td>
+      <td><a href="https://itunes.apple.com/us/podcast/ugeek/id1201421866?mt=2">ITunes</a></td>
+      <td><a href="https://www.ivoox.com/podcast-ugeek_sq_f1383493_1.html">ivoox</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ---------------------------------------------------Pon aquí el audio-------------------------------------------------------- -->
+<p><a href="https://ia601509.us.archive.org/6/items/046SyncthingResilioYDukto/%23046%20Syncthing%2c%20Resilio%20y%20Dukto%20.mp3">Descargar Podcast</a></p>
+
+<iframe src="https://archive.org/embed/046SyncthingResilioYDukto" width="100%" height="140" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen=""></iframe>
+<!-- ----------------------------------------------------Inicio de comentarios--------------------------------------------------- -->
+
+<p>En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones.</p>
+
+<p><a href="https://syncthing.net/">Syncthing</a></p>
+
+<p><a href="https://www.resilio.com">Resilio</a></p>
+
+<p><a href="http://www.msec.it/blog/?page_id=11">Dukto</a></p>
+
+<p>Muchas grácias a atareao.es y compilando podcast, por mencionar el podcast en los post y añadir los episodios en la rádio online.</p>
+
+<p><a href="https://www.atareao.es/otros/podcast-de-linux-y-software-libre">Podcast del atareao.es</a></p>
+
+<p><a href="https://t.co/l7Xqn1L2Oc">Compilando Podcast</a></p>
+
+<!-- -------------------------------------Aquí abajo los comentarios -------------------------------------------  -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-angelbcn-github-io-ugeek.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//https-angelbcn-github-io-ugeek.disqus.com/count.js" async=""></script>
+
+]]>
+    </content:encoded>
+
+    <enclosure url="https://ia601509.us.archive.org/6/items/046SyncthingResilioYDukto/%23046%20Syncthing%2c%20Resilio%20y%20Dukto%20.mp3" length="" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[Publicado por Angel Tags: , dukto , podcast , resilio , sincronización carpetas , syncthing , Suscribete al Blog RSS del Blog Suscribete al Podcast RSS ITunes ivoox Descargar Podcast En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones. Syncthing...]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<h3 id="publicado-por-angel">Publicado por Angel</h3>
+<p>Tags:   , <span class="tag"><a href="/tag2#dukto">dukto</a></span>  , <span class="tag"><a href="/tag2#podcast">podcast</a></span>  , <span class="tag"><a href="/tag2#resilio">resilio</a></span>  , <span class="tag"><a href="/tag2#sincronización carpetas">sincronización carpetas</a></span>  , <span class="tag"><a href="/tag2#syncthing">syncthing</a></span> ,</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Suscribete al Blog</td>
+      <td><a href="http://feeds.feedburner.com/uGeekBlog">RSS del Blog</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Suscribete al Podcast</td>
+      <td><a href="http://feeds.feedburner.com/ugeek">RSS</a></td>
+      <td><a href="https://itunes.apple.com/us/podcast/ugeek/id1201421866?mt=2">ITunes</a></td>
+      <td><a href="https://www.ivoox.com/podcast-ugeek_sq_f1383493_1.html">ivoox</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ---------------------------------------------------Pon aquí el audio-------------------------------------------------------- -->
+<p><a href="https://ia601509.us.archive.org/6/items/046SyncthingResilioYDukto/%23046%20Syncthing%2c%20Resilio%20y%20Dukto%20.mp3">Descargar Podcast</a></p>
+
+<iframe src="https://archive.org/embed/046SyncthingResilioYDukto" width="100%" height="140" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen=""></iframe>
+<!-- ----------------------------------------------------Inicio de comentarios--------------------------------------------------- -->
+
+<p>En el podcast de hoy, voy a explicaros como podeís sincronizar carpetas entre dispositivos, servidores, etc… Con tre aplicaciones.</p>
+
+<p><a href="https://syncthing.net/">Syncthing</a></p>
+
+<p><a href="https://www.resilio.com">Resilio</a></p>
+
+<p><a href="http://www.msec.it/blog/?page_id=11">Dukto</a></p>
+
+<p>Muchas grácias a atareao.es y compilando podcast, por mencionar el podcast en los post y añadir los episodios en la rádio online.</p>
+
+<p><a href="https://www.atareao.es/otros/podcast-de-linux-y-software-libre">Podcast del atareao.es</a></p>
+
+<p><a href="https://t.co/l7Xqn1L2Oc">Compilando Podcast</a></p>
+
+<!-- -------------------------------------Aquí abajo los comentarios -------------------------------------------  -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-angelbcn-github-io-ugeek.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//https-angelbcn-github-io-ugeek.disqus.com/count.js" async=""></script>
+
+]]></itunes:summary>
+    <itunes:author></itunes:author>
+    <itunes:image href="http://192.168.1.108:4000" />
+    <itunes:explicit></itunes:explicit>
+    <itunes:duration></itunes:duration>
+  </item>
+
+</channel>
+</rss>
